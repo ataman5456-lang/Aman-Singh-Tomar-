@@ -1,0 +1,6 @@
+{
+  "name": "Pocket Life – All-in-One Daily Utility App",
+  "description": "Premium, modern, mobile-first offline daily utility PWA featuring Expense Tracker, Calculators, Notes, Grocery List, Text Tools, QR Generator, and more.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

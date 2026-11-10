@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B071A" />
+      <stop offset="50%" stop-color="#1E1035" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle with safe zone -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect x="8" y="8" width="496" height="496" rx="120" fill="none" stroke="url(#primaryGrad)" stroke-width="4" stroke-opacity="0.3" />
+
+  <!-- Ambient glow circle -->
+  <circle cx="256" cy="256" r="140" fill="url(#primaryGrad)" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Pocket Symbol Shape -->
+  <path d="M 140 160 L 372 160 C 372 270 330 360 256 390 C 182 360 140 270 140 160 Z" 
+        fill="url(#primaryGrad)" opacity="0.9" />
+
+  <!-- Inner Stitching / Pocket Accent -->
+  <path d="M 164 180 L 348 180 C 348 262 312 334 256 360 C 200 334 164 262 164 180 Z" 
+        fill="#0B071A" opacity="0.6" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-dasharray="6,4" />
+
+  <!-- Utility Spark / Star Gem in Center -->
+  <path d="M 256 200 L 268 238 L 306 250 L 268 262 L 256 300 L 244 262 L 206 250 L 244 238 Z"
+        fill="#FFFFFF" filter="url(#glow)" />
+  
+  <!-- Modern 4-point accent sparks -->
+  <circle cx="210" cy="205" r="5" fill="#60A5FA" />
+  <circle cx="302" cy="295" r="5" fill="#A78BFA" />
+</svg>
